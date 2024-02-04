@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/reverse-linked-list-ii/
-# Brute force solution -- own
+# Solution -- own
 
 # Definition for singly-linked list.
 # class ListNode:
