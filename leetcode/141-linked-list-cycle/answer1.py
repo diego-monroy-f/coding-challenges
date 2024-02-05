@@ -1,6 +1,5 @@
 # https://leetcode.com/problems/linked-list-cycle/
 # Using Floyd's Turtle and Hare Algorithm -- own implementation (algorithm from course)
-# FIXME: Why does this not work?!
 
 # Definition for singly-linked list.
 # class ListNode:
@@ -10,15 +9,15 @@
 
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
-        turtle = head
+        tortoise = head
         hare = head
         while hare:
-            tutle = turtle.next
+            tortoise = tortoise.next
             if hare.next:
                 hare = hare.next.next
             else:
                 return False
-            if tutle == hare:
+            if tortoise == hare:
                 return True
                 # This is only if we want to retrieve the node:
                 # a = head
