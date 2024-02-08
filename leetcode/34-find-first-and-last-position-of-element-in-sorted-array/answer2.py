@@ -24,11 +24,11 @@ class Solution:
 
         while start_pos is not None:
             start = start_pos
-            start_pos = binary(nums, 0, first_pos - 1, target)
+            start_pos = binary(nums, 0, start_pos - 1, target)
 
         while end_pos is not None:
             end = end_pos
-            end_pos = binary(nums, first_pos + 1, len(nums) - 1, target)
+            end_pos = binary(nums, end_pos + 1, len(nums) - 1, target)
 
         start = start if start is not None else first_pos
         end = end if end is not None else first_pos
