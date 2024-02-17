@@ -17,7 +17,7 @@ class Solution:
             is_right_correct, is_left_correct = True, True
             if node.left:
                 is_left_correct = is_bst(node.left, lb, node.val)
-            if node.right:
+            if node.right and is_left_correct:
                 is_right_correct = is_bst(node.right, node.val, rb)
             return is_left_correct and is_right_correct
         return is_bst(root, float("-infinity"), float("infinity"))
